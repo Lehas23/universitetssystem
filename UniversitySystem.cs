@@ -60,6 +60,12 @@
         Console.WriteLine("2. Ansatt");
         string valg = Console.ReadLine() ?? "";
 
+        if (valg != "1" && valg != "2")
+        {
+            Console.WriteLine("Ugyldig valg.");
+            return;
+        }
+
         string brukerId = LesIkkeTom("Skriv inn ID:", "ID kan ikke være tom.");
         string navn = LesIkkeTom("Skriv inn Navn:", "Navn kan ikke være tomt");
         string passord = LesIkkeTom("Skriv inn Passord:", "Passord kan ikke være tomt");
